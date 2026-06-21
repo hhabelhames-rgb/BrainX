@@ -1,11 +1,11 @@
 import { Star, MapPin, Clock, MessageCircle, UserCheck, CalendarPlus, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { matchesApi, conversationsApi, sessionsApi } from "../api/api";
-import { useAuth } from "../context/AuthContext";
+
 import { toast } from "react-hot-toast";
 
 export default function Matches({ t }) {
-  const { token } = useAuth();
+  
   const [matches, setMatches] = useState([]);
   const [bookingUser, setBookingUser] = useState(null);
   const [bookingForm, setBookingForm] = useState({ skill: "", date: "", time: "", duration: "60" });
