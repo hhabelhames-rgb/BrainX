@@ -46,6 +46,7 @@ export default function Admin({ t }) {
     setLoading(false);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { load(); }, [tab]);
 
   const handleBlock = async (id, isBlocked) => {

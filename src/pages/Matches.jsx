@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import { toast } from "react-hot-toast";
 
 export default function Matches({ t }) {
-  const { user } = useAuth();
+  const { token } = useAuth();
   const [matches, setMatches] = useState([]);
   const [bookingUser, setBookingUser] = useState(null);
   const [bookingForm, setBookingForm] = useState({ skill: "", date: "", time: "", duration: "60" });

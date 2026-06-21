@@ -81,7 +81,6 @@ export const translations = {
     completedExchanges: "Completed Exchanges",
     frontendDeveloper: "Frontend Developer",
     skillExchanger: "Skill Exchanger",
-    skillExchanger: "Skill Exchanger",
     algeria: "Algeria",
 
     // Admin
@@ -101,7 +100,6 @@ export const translations = {
 
     // General & Browse & Profile
     book: "Book",
-    about: "About",
     languagesFilter: "Languages",
     programming: "Programming",
     design: "Design",
@@ -240,7 +238,6 @@ export const translations = {
     completedExchanges: "Échanges terminés",
     frontendDeveloper: "Développeuse Frontend",
     skillExchanger: "Échangeuse de compétences",
-    skillExchanger: "Échangeuse de compétences",
     algeria: "Algérie",
 
     // Admin
@@ -260,7 +257,6 @@ export const translations = {
 
     // General & Browse & Profile
     book: "Réserver",
-    about: "À propos",
     languagesFilter: "Langues",
     programming: "Programmation",
     design: "Design",
@@ -400,7 +396,6 @@ export const translations = {
     completedExchanges: "تبادلات مكتملة",
     frontendDeveloper: "مطوّرة واجهات أمامية",
     skillExchanger: "متبادلة مهارات",
-    skillExchanger: "متبادلة مهارات",
     algeria: "الجزائر",
 
     // Admin
@@ -420,7 +415,6 @@ export const translations = {
 
     // General & Browse & Profile
     book: "حجز",
-    about: "حول",
     languagesFilter: "اللغات",
     programming: "البرمجة",
     design: "التصميم",

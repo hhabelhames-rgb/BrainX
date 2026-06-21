@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { conversationsApi, messagesApi } from "../api/api";
 import { useAuth } from "../context/AuthContext";
 import { useSocket } from "../context/SocketContext";
-import { toast } from "react-hot-toast";
 
 export default function Messages({ t }) {
   const { user } = useAuth();

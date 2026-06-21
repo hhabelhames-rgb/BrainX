@@ -15,6 +15,7 @@ export default function App() {
   useEffect(() => {
     if (user) setPage("app");
     else if (page === "app") setPage("landing");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const t = translations[lang];
