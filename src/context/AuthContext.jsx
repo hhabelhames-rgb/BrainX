@@ -61,6 +61,16 @@ export function AuthProvider({ children }) {
     return u;
   }, []);
 
+  const googleLogin = useCallback(async (googleToken) => {
+    const { data } = await authApi.googleLogin(googleToken);
+    const { user: u, accessToken } = data.data;
+    localStorage.setItem('brainx_access_token', accessToken);
+    localStorage.setItem('brainx_user', JSON.stringify(u));
+    setUser(u);
+    setToken(accessToken);
+    return u;
+  }, []);
+
   const register = useCallback(async (formData) => {
     const { data } = await authApi.register(formData);
     const { user: u, accessToken } = data.data;
@@ -88,7 +98,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, token, loading, login, register, logout, updateUser }}>
+    <AuthContext.Provider value={{ user, token, loading, login, googleLogin, register, logout, updateUser }}>
       {children}
     </AuthContext.Provider>
   );

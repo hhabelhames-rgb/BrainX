@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { toast } from "react-hot-toast";
+import { GoogleLogin } from '@react-oauth/google';
 
 export default function AuthPage({ t, onLogin, onBack }) {
-  const { login, register } = useAuth();
+  const { login, register, googleLogin } = useAuth();
   const [tab, setTab] = useState("login");
   const [form, setForm] = useState({
     fullName: "",
@@ -58,6 +59,31 @@ export default function AuthPage({ t, onLogin, onBack }) {
           >
             {t.signup}
           </button>
+        </div>
+
+        <div className="auth-google">
+          <GoogleLogin
+            onSuccess={async (credentialResponse) => {
+              try {
+                await googleLogin(credentialResponse.credential);
+                toast.success("Logged in with Google!");
+                onLogin();
+              } catch (err) {
+                toast.error("Google authentication failed");
+              }
+            }}
+            onError={() => {
+              toast.error("Google Login Failed");
+            }}
+            theme="outline"
+            size="large"
+            width="100%"
+            text={tab === "login" ? "signin_with" : "signup_with"}
+          />
+        </div>
+        
+        <div className="auth-divider">
+          <span>or continue with email</span>
         </div>
 
         <div className="auth-fields">
